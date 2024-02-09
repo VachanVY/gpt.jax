@@ -58,6 +58,70 @@ It love not I must that him, thou art the what I mean the came
 The traitors of curse
 Intriged field.
 ```
+```
+PRINCE EDWARD IV:
+But Warwick. Well, my lord, liether spite of ill-shaped on the king was thine every thing;
+And sting,
+And make your house
+Be and his native the cure of the abject,
+And set thy crown.
+
+KING HENRY VI:
+What call King Lewis unto the queen
+Romeo's hand this sin
+Hast to creature in tenter'd jot.
+
+KING EDWARD IV:
+I will not pectacle thinks it none inforce we favour'd, and not ceaming common doth swell: even you shall remains,--but lies
+Not safeget;
+And that rough for this:
+And, murder, my lords, to yours, if Warwick by tongue,
+And do it.
+
+LEONTES:
+A blind they to see thing Tybalt;
+And what's a dauphin is thy face,
+Writ in that she's could, do evention may brothers daggers than you like to ours must have been wappear to a hown.
+
+CLARENCE:
+Why, lords, there is no thou there is no stops this world forget young Rosaling show'd you slow, with the sight.
+
+POLIXENES:
+Brother for one?
+
+Second Watchman:
+I am they are spake it, and yet next and will acts, sport the lalong,
+And a king in renown'd;
+And us hold we were hath done me merry in the prince, I will father's traitor
+Be patience,
+Or else he lady to London the common both objects taken.
+
+LADY GREY:
+Each thee thinkit is it
+is not night
+Never parent shall be concludate thine.
+
+LEONTES:
+'O, God, I as my deserves is the house of life
+In which words, come, in to be seen returns and so that son in a lady from the edge
+Which sworn,
+Or any tamping trees they saw truth,
+Which, seeks of your majesty
+To rase! O, thou native place.
+
+DUCHESS OF YORK:
+I came, and so I
+Wrath Margaret, and I ordain'd.
+
+KING EDWARD IV:
+Let me merry of their woman!
+Prepare our brothers can to be repossessor for Burgunarring sweet; unshine my tender than trust: as I not stay at the cell a rraven, do some for her children, there I like not, I prush.
+But he do a fool!
+A' ha! dare not poor my exercise are all of much is brother?
+
+WARWICK:
+My brother of ourse...
+```
 
 * Sampling technique: `top-k=10`; `temperature=0.89
 ```
@@ -145,7 +209,7 @@ And, as mine.
 
 KING HENRY VI:
 What sleep, and as falling on the taunts he was to make me these honourably threat thus toward the shall we met then bring your me got wantings insulting tempeach my friendly,
-Bulo, thou could day by complices, as my
+Bulo, thou could day by complices, as my ...
 ```
 ### TODOs
 * Improve loss on the validation data
