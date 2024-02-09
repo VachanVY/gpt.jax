@@ -58,6 +58,7 @@ It love not I must that him, thou art the what I mean the came
 The traitors of curse
 Intriged field.
 ```
+After improving Validation Loss
 ```
 PRINCE EDWARD IV:
 But Warwick. Well, my lord, liether spite of ill-shaped on the king was thine every thing;
@@ -178,6 +179,7 @@ For which I pine it.
 Second Citizen:
 The princ...
 ```
+After improving Validation Loss
 ```
 RORIRICHASNMTIMsS:
 You are throne, being to die,
