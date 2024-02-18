@@ -118,8 +118,7 @@ Ay, my lord, my master was all most promise.
 ...
 ```
 
-* Greedy Sampling
-* This sampling technique isn't good. Bad Predictions
+* Greedy Sampling (This sampling technique isn't good. Bad Predictions)
 ```
 I the shoon ther the
 shout to bearry.
