@@ -3,7 +3,7 @@
 * [GPT](https://colab.research.google.com/drive/1d4BmKVoNGREQR2j2yv9lHORrcWS4eLgl#scrollTo=AP2x1jC9-319)
 * [GPT-2](https://colab.research.google.com/drive/1d4BmKVoNGREQR2j2yv9lHORrcWS4eLgl#scrollTo=yHOofcd8Jajj)
 * [GPT-3](https://colab.research.google.com/drive/1d4BmKVoNGREQR2j2yv9lHORrcWS4eLgl#scrollTo=mlHE3Xmjo290)
-* GPT-4: Multimodal Model, not open-sourced by OpenAi :(
+* GPT-4: Multimodal Model, not open-sourced by OpenAI
 * Also check out my Transformer repo [Attention-Is-All-You-Need](https://github.com/VachanVY/Attention-Is-All-You-Need)
 * Check out the `.ipynb` files for full training guide
 
