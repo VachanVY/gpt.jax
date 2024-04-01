@@ -1,5 +1,5 @@
 # GPT
-* This repo is mainly for educational purposses, it covers a full training guide to train Language models on large datasets starting from small models and scaling it after doing some experiments on the small models
+* This repo is mainly for educational purposes, it covers a full training guide to train Language models on large datasets starting from small models and scaling it after doing some experiments on the small models
 
 ## [Tiny Stories Dataset](https://huggingface.co/datasets/roneneldan/TinyStories)
 
@@ -16,7 +16,7 @@
 * Obtained **Validation Loss** of `1.3343884` with an **accuracy** of `63%`, `:‑|`. It had a vocab size of `512`. Used `sentence_piece_512.model` for tokenizing
 
 #### Predictions
-* Don't except much, it's a very small model. You'll see the predictions get good as the model size increases
+* Don't expect much, it's a very small model. You'll see the predictions get good as the model size increases
 * Prompt: `Once upon a time,`; Sampling Technique: `Greedy sampling`
 
     ```
