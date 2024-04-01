@@ -1,140 +1,124 @@
 # GPT
-## GPT Paper Summaries
-* [GPT](https://colab.research.google.com/drive/1d4BmKVoNGREQR2j2yv9lHORrcWS4eLgl#scrollTo=AP2x1jC9-319)
-* [GPT-2](https://colab.research.google.com/drive/1d4BmKVoNGREQR2j2yv9lHORrcWS4eLgl#scrollTo=yHOofcd8Jajj)
-* [GPT-3](https://colab.research.google.com/drive/1d4BmKVoNGREQR2j2yv9lHORrcWS4eLgl#scrollTo=mlHE3Xmjo290)
-* GPT-4: Multimodal Model, not open-sourced by OpenAI
-* Also check out my Transformer repo [Attention-Is-All-You-Need](https://github.com/VachanVY/Attention-Is-All-You-Need)
-* Check out the `.ipynb` files for full training guide
+* This repo is mainly for educational purposses, it covers a full training guide to train Language models on large datasets starting from small models and scaling it after doing some experiments on the small models
 
-## Trained on [Shakespeare Dataset](https://homl.info/shakespeare):
+## [Tiny Stories Dataset](https://huggingface.co/datasets/roneneldan/TinyStories)
+
+| Model-Params       | Estimated Validation Loss   |
+| -------------      |:-------------------------:  |
+| *280K*             | **1.3343**                  |
+| *15M*              | **Training...**             |
+| *45M*              | **TODO**                    |
+| *110M*             | **TODO**                    |
+
+### 280K Parameter Model
+* ![alt text](images/image.png)
+#### Results
+* Obtained **Validation Loss** of `1.3343884` with an **accuracy** of `63%`, `:‑|`. It had a vocab size of `512`. Used `sentence_piece_512.model` for tokenizing
+
+#### Predictions
+* Don't except much, it's a very small model. You'll see the predictions get good as the model size increases
+* Prompt: `Once upon a time,`; Sampling Technique: `Greedy sampling`
+
+    ```
+    Once upon a time, there was a little boy named Tim. Tim loved to play with his toy car. One day, he saw a big box in his yard. The box was very fast. Tim wanted to play with the box.
+    Tim asked his friend, Sam, "Can I play with the box?" Sam said, "Yes, I can play with the box." Sam said, "Yes, I can play with my box."
+    Tim and Sam played with the box together. They played together all day. They had so much fun. Then, they found a big box. Tim and Sam were very happy. They played together all day.
+    ```
+* Prompt: `Once upon a time,`; Sampling Technique: `top-2`
+
+    ```
+    Once upon a time, in a small house, there lived a little girl named Amy. She loved to play with her friends. One day, she went to the park with her mom and dad to play with her toys in the park.
+    At the park, Amy's friend, a little boy named Tim, saw the boy. They were shy and colorful. They played together all day long, and had a fun day at the park.
+    Amy and Amy played with their toys and had a lot of fun. They had so much fun playing together. Amy was very happy and played with her toys all day long. They had a lot of fun together. And they all lived happily ever after.
+    ```
+
+## [Tiny Shakespeare Dataset](https://homl.info/shakespeare)
 ### Results
-* Validation Loss of **1.4790** with a character-level model (6 Million parameters)
+* Obtained a **Validation Loss** (with 10% of the total data for validation) of **1.4939** with a character-level model (**~6 Million parameters**)
 
 ### Predictions
-* Sampling technique: `Random Categorical`; `temperature=0.80`
-```
-RICHARD:
-Shall I meet thee on you should pluck a blame
-Of the duke will go wonder.
+* Sampling technique: `Random Categorical` with `temperature=0.80`
+    ```
+    Second Servingman:
+    The ground of Claudio take thee to his country:
+    And ere I did confess too, my words is full as
+    some from night once with your grace for your contract,
+    So think his face have turns the liberty.
 
-CORIOLANUS:
-Come, cousin!
+    AUTOLYCUS:
+    True, do not soon did stay awhile.
 
-HERMIONE:
-Brother, better than bitter, and you are rule in his
-terrorious character, therefore shall after for him,
-Many eyes of this ancient to his country:
-And ere they scarce to possession,
-As from me thy blood master good will you once ear.
+    GREMIO:
+    Why, I shall wish our honour.
 
-GLOUCESTER:
-Thou shalt do it please your grace.
+    AUTOLYCUS:
+    I think you, this honourable house:
+    This guard is the licked with some fearful day.
 
-CLARENCE:
-What's the royal beauty?
+    KING LEWIS XI:
+    Well, wisely at your wisely and base this father
+    In the most enough and my mistress fortune to
+    like that the world I think comes here.
 
-ROMEO:
-Hark you not, let me speak to princely out of any.
+    DUKE VINCENTIO:
+    Now, no, that will defend you, sir; yet you have
+    with him and befall'n him. His worse whereof,
+    Even in Vienna stand of proofs are as beshy
+    To the brother comes, that in a better,
+    For Rome is before his suit is an army,
+    Thy soul that is dead, and must be infect.
+    I come to my wit think a well widower?
 
-QUEEN ELIZABETH:
-Well, well met them.
+    KING RICHARD II:
+    Good man, sir, sir, I will say not it is.
+    This is it may be, my lord,
+    But I enter the way and her drop in thee.
+    ...
+    ```
 
-DUKE VINCENTIO:
-A pity, a little prince in them, but I say, then?
-O woman, sir, I am a charelessed was that
-not deserved with limits that so in my mind
-Than she shall live to follow these true just
-To be worthy talked of our cause, her chains
-That is the palace of men. I pray you, sir.
+* Sampling technique: `tok-10 sampling` with `temperature=0.8`
+    ```
+    DUKE VINCENTIO:
+    That stabb'd me not affections,
+    To thy good convenient commands to the
+    sea-side, or the pleasure, of this way
+    To be a man false to the fire of his wife:
+    A gentle prayers of slanders of the babe.
 
-MERCUTIO:
-O Play the Duke of God!
+    GLOUCESTER:
+    Slander'd with a prisoner, sir; I will watch her honourable
+    Of your honour, and your husband's friends,
+    And his country's love, where you shall something be
+    broke to the sun to see him hither. Who's the breath?
+    O heavy spirits! What said with that?
 
-Provost:
-I shall be proof. What shall you have been true?
+    Second Murderer:
+    Say thou not so high hath lost to such a word,
+    To thy son, and so far as they are not by the
+    people have not wash'd his hands.
 
-MISTRESS OVERDONE:
-I'll sure thee to see the divine.
+    Clown:
+    And when he shall through they have an enemies
+    Hath not beside to die since a banish'd from
+    Which the sea that hath made good curse my country;
+    But what would they do mine eyes still the strength.
 
-KING RICHARD III:
-Hath sends him here will speak to bear the middle.
+    KING EDWARD IV:
+    Ay, a man; what means the senators from her fair,
+    If she that thou spit your wedded proceeded
+    His proceeding to her study: and so base her about
+    In the girls of some blest of the sweet day,
+    As if you look'd by this point. But stay 'twas the
+    defenders of the business of your brows:
+    I'll pity the flower and lose against the same.
+    Thou canst give me not; the rest is out
+    As sweeter please you, sir.
+    ```
+* Not bad for a character level model, `( ͡° ͜ʖ ͡°)`.
 
-Nurse:
-I am so much as like a store than my prosperous
-tongue in the people's knees. Have I repent thee
-Against the love with him up to do it.
-...
-```
-
-* Sampling technique: `top-k=5`; `temperature=0.80`
-```
-KING EDWARD IV:
-But what's the princes of me, and they shall pardon thee,
-And, as the part in all power of this deeds
-Of my sweet boys before I cannot do't;
-And so her fair a person of your chamber,
-The presently gods have more private to see
-The crown another did lurk to she should be sentence.
-
-LUCIO:
-And thou art pluck'd as the sweetest subjects.
-
-DUKE VINCENTIO:
-Thou'rt be the case of teach him.
-
-Second Citizen:
-I should say 'twas to my lips.
-
-CORIOLANUS:
-I do remain to meet the people.
-
-Provost:
-Madam, we have no more. That is a character's child?
-
-PAULINA:
-I cannot damnable and honesty.
-
-LUCIO:
-A most graciously since I will not be so,
-If you shall be married with the sun,
-The trumpets, and the stocks of his place.
-
-KING HENRY VI:
-Well, sir, the gods but one of your honours.
-
-MERCUTIO:
-I think thee a party times and seen them,
-And where you did be a chustic and safety thee,
-To make thee seek to be the wrong.
-
-PETRUCHIO:
-An is in the morning of him well in her
-Beauties the chamber, who is the chair,
-Which should show me to my head?
-
-LORD ROSS:
-Ay, my lord, my master was all most promise.
-...
-```
-
-* Greedy Sampling (This sampling technique isn't good. Bad Predictions)
-```
-I the shoon ther the
-shout to bearry.
-
-KING RICHARD III:
-What is the strampedies
-Aue thantie tend the air oful day.
-
-KING RICHARD IORD LARDOHARDARD IINRE:
-Was nothing bless at ble ble bombombras,
-Aneft the sea of thearrmonithe ale mottte,
-amoon'sh thatt the sea of the sea,
-And therefore are the season of the sea,
-And therefore are the season of the sea,
-And therefore are the season of the sea,
-And therefore are the season of the sea,
-And therefore are the season of the sea,
-And therefore are the ...
-```
+## Reference and Useful Links
+* GPT:[[Paper Summary]](https://colab.research.google.com/drive/1d4BmKVoNGREQR2j2yv9lHORrcWS4eLgl#scrollTo=AP2x1jC9-319) [[Arxiv Paper]](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
+* GPT-2:[[Paper Summary]](https://colab.research.google.com/drive/1d4BmKVoNGREQR2j2yv9lHORrcWS4eLgl#scrollTo=yHOofcd8Jajj) [[Arxiv paper]](https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf)
+* GPT-3 [[Paper Summary]](https://colab.research.google.com/drive/1d4BmKVoNGREQR2j2yv9lHORrcWS4eLgl#scrollTo=mlHE3Xmjo290) [[Arxiv Paper]](https://arxiv.org/pdf/2005.14165.pdf)
+* GPT-4: Multimodal Model, not open-sourced by OpenAI
+* Also check out my Transformer repo [Attention-Is-All-You-Need](https://github.com/VachanVY/Attention-Is-All-You-Need)
