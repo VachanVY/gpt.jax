@@ -11,7 +11,7 @@
 | *110M*             | **TODO**                    |
 
 ### 280K Parameter Model
-* ![alt text](images/image.png)
+![alt text](images/image.png)
 #### Results
 * Obtained **Validation Loss** of `1.3343884` with an **accuracy** of `63%`, `:‑|`. It had a vocab size of `512`. Used `sentence_piece_512.model` for tokenizing
 
