@@ -1,0 +1,14 @@
+.venv
+
+# Testing and experiments
+*copy*.ipynb
+
+# dataset and shards
+*.txt
+*npy
+*.tar.gz
+
+__pycache__
+
+# checkpoints between training
+*0.weights
