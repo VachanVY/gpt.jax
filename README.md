@@ -1,35 +1,74 @@
 # GPT
 * This repo is mainly for educational purposes, it covers a full training guide to train Language models on large datasets starting from small models and scaling it after doing some experiments on the small models
+* All models were trained on a RTX 4090 GPU, brrrr.
 
 ## [Tiny Stories Dataset](https://huggingface.co/datasets/roneneldan/TinyStories)
 
-| Model-Params       | Estimated Validation Loss   |
-| -------------      |:-------------------------:  |
-| *280K*             | **1.3343**                  |
-| *15M*              | **Training...**             |
-| *45M*              | **TODO**                    |
-| *110M*             | **TODO**                    |
+| Model-Params       |`d_model`| `n_heads`  | `maximum_context_length` | `vocab_size` | Estimated Validation Loss   |
+| :-------------:    |:-------:|:----------:|:------------------------:|:------------:|:-------------------------:  |
+| *280K*             |   64    |     8      |           512            |      512     |      **1.3344**             |
+| *15M*              |   288   |     6      |           256            |     32000    |      **1.2373**             |
+| *45M*              |   512   |     8      |           1024           |     32000    |      **TODO**               |
+| *110M*             |   768   |     12     |           2048           |     32000    |      **TODO**               |
 
 ### 280K Parameter Model
-![alt text](images/image.png)
+* ![alt text](images/image.png)
 #### Results
-* Obtained **Validation Loss** of `1.3343884` with an **accuracy** of `63%`, `:‑|`. It had a vocab size of `512`. Used `sentence_piece_512.model` for tokenizing
+* Obtained a **Validation Loss** of `1.3344` with an **accuracy** of `63%`, `:‑|`. It had a vocab size of `512`. Used `sentence_piece_512.model` for tokenizing
 
 #### Predictions
 * Don't expect much, it's a very small model. You'll see the predictions get good as the model size increases
-* Prompt: `Once upon a time,`; Sampling Technique: `Greedy sampling`
+* Prompt: `Once upon a time,` | Sampling Technique: `Greedy sampling`
 
     ```
     Once upon a time, there was a little boy named Tim. Tim loved to play with his toy car. One day, he saw a big box in his yard. The box was very fast. Tim wanted to play with the box.
     Tim asked his friend, Sam, "Can I play with the box?" Sam said, "Yes, I can play with the box." Sam said, "Yes, I can play with my box."
     Tim and Sam played with the box together. They played together all day. They had so much fun. Then, they found a big box. Tim and Sam were very happy. They played together all day.
     ```
-* Prompt: `Once upon a time,`; Sampling Technique: `top-2`
+* Prompt: `Once upon a time,` | Sampling Technique: `top-k = 2`
 
     ```
     Once upon a time, in a small house, there lived a little girl named Amy. She loved to play with her friends. One day, she went to the park with her mom and dad to play with her toys in the park.
     At the park, Amy's friend, a little boy named Tim, saw the boy. They were shy and colorful. They played together all day long, and had a fun day at the park.
     Amy and Amy played with their toys and had a lot of fun. They had so much fun playing together. Amy was very happy and played with her toys all day long. They had a lot of fun together. And they all lived happily ever after.
+    ```
+
+### 15M Parameter Model
+* ![alt text](images/image1.png)
+
+    (model will be improved soon...)
+
+#### Results
+* Obtained a **Validation Loss** of `1.2473` with an accuracy of `67%`, `:-|`,
+It had a vocab size of `32000`. Used `sentence_piece_32000.model` for tokenizing
+
+#### Predictions
+* Predictions have difinetely improved!
+* Prompt: `Once upon a time,` | Sampling Technique: `Greedy sampling`
+
+    ```
+    Once upon a time, there was a little girl named Lily. She had a big, red ball that she loved to play with. One day, she went to the park with her mom and dad. They played with the ball and had lots of fun.
+    While playing, Lily saw a small, lost kitten. The kitten was scared and alone. Lily wanted to help the kitten, so she took it home. She gave the kitten some food and water. The kitten was very happy and started to purr.
+    Lily's mom and dad saw the kitten and knew it was a special kitten. They took the kitten home and gave it a warm bed. The kitten was so happy and loved its new home. Lily and the kitten became best friends, and they played together every day.
+    ```
+* Prompt: `Once upon a time, in a big forest, there was a fearful little dog named Spot` | Sampling Technique: `Greedy sampling`
+    ```
+    Once upon a time, in a big forest, there was a fearful little dog named Spot. Spot was scared of many things. One day, Spot saw a big tree with a hole in it. He thought, "I want to see what is inside the hole."
+    Spot went to the tree and looked inside the hole. He saw a little bird with a hurt wing. Spot said, "I will help you, little bird." He used his paw to gently lift the bird out of the hole. The bird was very happy and said, "Thank you, Spot!"
+    Spot and the bird became good friends. They played together in the forest every day. Spot learned that it is good to help others, even if they are scared of something. And they lived happily ever after.
+    ```
+* Prompt: `Once upon a time,` | Sampling Technique: `top_p = 0.9`
+
+    ```
+    Once upon a time, there was a little girl named Sue. Sue had a toy box full of her favorite toys. One day, she found a big, fake bear in the toy box. She was very happy and wanted to play with it all day.
+    Sue took the bear out of the toy box and started to play. She threw the bear high in the air and watched it fall back down. Sue liked to count how many times the bear went up and down. She counted one, two, three, four, five, six, seven, eight, nine, ten. Sue was having so much fun counting with her new toy bear.
+    But then, something unexpected happened. The fake bear started to talk! It said, "Sue, I am not a fake bear. I am a magic bear! I can make your toys come to life!" Sue was very surprised. She asked the magic bear to make her toys come to life. The magic bear made her toys come to life and play with her. Sue and her toys played together all day long.
+    ```
+* Prompt: `Once upon a time, in a big forest, there was a fearful little dog named Spot` | Sampling Technique: `top-k = 50`
+    ```
+    Once upon a time, in a big forest, there was a fearful little dog named Spot. Spot was scared of everything. One day, Spot saw a big red ball stuck in a tree. He wanted to play with the ball, but he was too scared to climb the tree.
+    A kind bird named Blue saw Spot's fear and wanted to help. Blue flew up to the big red ball and pushed it with her beak. The ball fell down from the tree, and Spot was very happy.
+    As the ball came down, it started to wiggle! Spot was not scared anymore. He played with the ball and had lots of fun. Spot and Blue became best friends. They played together every day, and Spot never felt alone again.
     ```
 
 ## [Tiny Shakespeare Dataset](https://homl.info/shakespeare)
