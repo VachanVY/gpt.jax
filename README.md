@@ -1,6 +1,6 @@
 # GPT
 * This repo is mainly for educational purposes, it covers a full training guide to train Language models on large datasets starting from small models and scaling it after doing some experiments on the small models
-* All models were trained on a RTX 4090 GPU, brrrr.
+* All models were trained on an RTX 4090 GPU, brrrr.
 
 ## [Tiny Stories Dataset](https://huggingface.co/datasets/roneneldan/TinyStories)
 
@@ -36,14 +36,14 @@
 ### 15M Parameter Model
 * ![alt text](images/image1.png)
 
-    (model will be improved soon...)
+    (the model will be improved soon...)
 
 #### Results
 * Obtained a **Validation Loss** of `1.2473` with an accuracy of `67%`, `:-|`,
 It had a vocab size of `32000`. Used `sentence_piece_32000.model` for tokenizing
 
 #### Predictions
-* Predictions have difinetely improved!
+* Predictions have definitely improved!
 * Prompt: `Once upon a time,` | Sampling Technique: `Greedy sampling`
 
     ```
