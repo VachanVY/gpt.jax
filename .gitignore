@@ -11,4 +11,4 @@
 __pycache__
 
 # checkpoints between training
-*0.weights
+*.gpt
