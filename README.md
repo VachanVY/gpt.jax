@@ -36,8 +36,6 @@
 ### 15M Parameter Model
 * ![alt text](images/image1.png)
 
-    (model will be improved soon...)
-
 #### Results
 * Obtained a **Validation Loss** of `1.19` with an accuracy of about `70%`,
 It had a vocab size of `32000`. Used `sentence_piece_32000.model` for tokenizing
@@ -47,9 +45,9 @@ It had a vocab size of `32000`. Used `sentence_piece_32000.model` for tokenizing
 * Prompt: `Once upon a time,` | Sampling Technique: `Greedy sampling`
 
     ```
-    Once upon a time, there was a little girl named Lily. She had a big, red ball that she loved to play with. One day, she went to the park with her mom and dad. They played with the ball and had lots of fun.
-    While playing, Lily saw a small, lost kitten. The kitten was scared and alone. Lily wanted to help the kitten, so she took it home. She gave the kitten some food and water. The kitten was very happy and started to purr.
-    Lily's mom and dad saw the kitten and knew it was a special kitten. They took the kitten home and gave it a warm bed. The kitten was so happy and loved its new home. Lily and the kitten became best friends, and they played together every day.
+    Once upon a time, there was a little girl named Lily. She loved to play with her toys and eat yummy food. One day, she found a big, round thing in her room. It was a microscope. Lily was very curious about it.
+    Lily wanted to see what was inside the microscope. She tried to open it, but it was very hard. She tried and tried, but she could not open it. Lily felt sad and wanted to find a way to open the microscope.
+    Then, Lily had an idea. She asked her mom for help. Her mom showed her how to open the microscope. Lily was so happy! She looked through the microscope and saw many tiny things. She was so excited to see the tiny things. Lily and her mom had a fun day together.
     ```
 * Prompt: `Once upon a time, in a big forest, there was a fearful little dog named Spot` | Sampling Technique: `Greedy sampling`
     ```
