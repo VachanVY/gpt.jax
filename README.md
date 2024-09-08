@@ -153,6 +153,9 @@ It had a vocab size of `32000`. Used `sentence_piece_32000.model` for tokenizing
     ```
 * Not bad for a character level model, `( ͡° ͜ʖ ͡°)`.
 
+## Chinchilla Models Hyper-Parameters
+* ![image](https://github.com/user-attachments/assets/2cb1e3b6-23ab-402d-adb5-bcb9fefe53ad)
+
 ## Reference and Useful Links
 * GPT:[[Paper Summary]](https://colab.research.google.com/drive/1d4BmKVoNGREQR2j2yv9lHORrcWS4eLgl#scrollTo=AP2x1jC9-319) [[Arxiv Paper]](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
 * GPT-2:[[Paper Summary]](https://colab.research.google.com/drive/1d4BmKVoNGREQR2j2yv9lHORrcWS4eLgl#scrollTo=yHOofcd8Jajj) [[Arxiv paper]](https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf)
