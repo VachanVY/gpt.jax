@@ -1,6 +1,9 @@
 # GPT
 * This repo is mainly for educational purposes, it covers a full training guide to train Language models on large datasets starting from small models and scaling it after doing some experiments on the small models
-* All models were trained on a RTX 4090 GPU, brrrr.
+* All models were trained on an RTX 4090 GPU, brrrr.
+* 15 Million parameter model trained on tiny stories dataset: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/#scrollTo=vAotW3F-fjjK&fileId=https%3A//huggingface.co/vachanvy/gpt.jax/blob/main/GPTStories_15M.ipynb)
+* 280K parameter model trained on tiny stories dataset: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/#fileId=https://huggingface.co/vachanvy/gpt.jax/blob/main/GPTStories_280K.ipynb)
+* 6 Million parameter model trained on tiny Shakespeare dataset: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/#fileId=https%3A//huggingface.co/vachanvy/gpt.jax/blob/main/GPT_shakespeare_6M.ipynb)
 
 ## [Tiny Stories Dataset](https://huggingface.co/datasets/roneneldan/TinyStories)
 
